@@ -1,0 +1,89 @@
+body {
+    place-items: center;
+  }
+  .circle {
+    width: 70px;
+    height: 70px;
+    background-color: #2135a3;
+    border-radius: 50%;
+    border: red 3px solid;
+
+    --xA: 10px;
+    --yA: 10px;
+    --xB: 30px;
+    --yB: 30px;
+
+    animation-name: moveCircle;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    
+
+  }
+  .circlelil {
+    width: 30px;
+    height: 30px;
+    background-color: #2135a3;
+    border-radius: 50%;
+    border: red 3px solid;
+
+    --xA: 10px;
+    --yA: 10px;
+    --xB: 30px;
+    --yB: 30px;
+
+    animation-name: moveCircle;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    
+
+  }
+  .triangle {
+    height : 0;
+    width : 0;
+    border-right : 63px solid transparent;
+    border-bottom : 20px solid red;
+    border-left : 20px solid transparent;
+
+    --xAt: 40px;
+    --yAt: 50px;
+    --xBt: 60px;
+    --yBt: 60px;
+
+    animation-name: moveTriangle;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.17, .67, .4, 1.31);
+  }
+  
+  .container {
+    width: 100%;
+    height: 500px;
+    border: 5px solid #807a7a;
+    overflow: hidden;
+    background-color: #000000;
+  }
+
+  @keyframes moveCircle {
+    0% {
+      transform: translate3d(var(--xA), var(--yA), 0);
+    }
+    50% {
+        transform: translate3d(var(--xC), var(--yC), 0);
+      }
+    100% {
+      transform: translate3d(var(--xB), var(--yB), 0);
+    }
+  }
+  @keyframes moveTriangle {
+    0% {
+      transform: translate3d(var(--xAt), var(--yAt), 0);
+    }
+    100% {
+      transform: translate3d(var(--xBt), var(--yBt), 0);
+    }
+}
+
+  .p1{
+    position: absolute;
+    bottom: 0;
+  }
