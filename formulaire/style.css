@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("img/storm.jpg");
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: center;
+}
+.lettre{
+    background-color: rgba(0, 119, 255, 0.562);
+    padding: 20px;
+    margin: 50px auto;
+    width: 500px;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.288);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    color: white;       
+    text-shadow:  1px 1px 2px rgb(0, 153, 255), 0 0 1em blue, 0 0 0.2em blue;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+input, label, select, textarea{
+    width: 100%;
+    padding: 20px 8px;
+    margin: 3px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+label {
+    text-align: left;
+    color: black;
+    text-decoration: underline;
+}
+input, textarea, select, .avatar{
+    background-color: #0000007a;
+    color: white;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0);
+}
+.avatar{
+    border: 2px solid rgb(0, 0, 0);
+}
+.button:hover{
+    background-color: #230569;
+}
+#input1:valid{
+    background-color: rgba(21, 126, 0, 0.685);
+}
+#input1:invalid{
+    background-color: rgba(126, 0, 0, 0.685);
+
+}

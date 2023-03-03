@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>formulaire</title>
+</head>
+<body>
+    <div class="lettre">
+        <form>
+            <h1>Fiche de présentation</h1>
+            <label for="avatar"><strong>* La meilleure photo de vous : </strong></label> <br>
+                <input " type="file"class="avatar" name="avatar"accept="image/png, image/jpeg" required>  
+            <label name="prenom" for="prenom"><strong>*Votre prénom : </strong></label> <br>
+                <input id="input1" pattern = "[a-zA-Z]{1,5000}" class="inputprenom" type="text" placeholder="svp c'est obligatoire" name="prenom" required> <br>
+            <label for="nom"><strong>*Votre nom :</strong></label>
+                <input id="input1" pattern = "[a-zA-Z]{1,5000}" class="nom" type="text" placeholder="svp c'est obligatoire" name="nom" required> 
+            <select class="selection" name="developpeur" class="choix">
+                    <option value="Type de développeur">Type de développeur</option>
+                    <option value="">Front office</option>
+                    <option value="">Back office</option>
+                    <option value="">Full stack !</option>
+            </select>
+            <label for="description"><strong> Qui êtes vous ?</strong></label>        
+                <textarea pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,5000}" id="input1" name="description" class="description" cols="30" rows="6" required>Une description de vous, selon votre perspective, puis selon celle d'un recruteur</textarea>
+                <input class="button" name="button" onclick="isEmpty(), isString()" type="submit">
+        </form>
+        <section>
+            
+        </section>
+</div>
+</body>
+</html>
