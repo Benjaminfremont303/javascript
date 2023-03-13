@@ -11,8 +11,8 @@ let splash1 = document.querySelector(".splash1");
 
 playerc.addEventListener('click', function() {
  
-        playerc.style.visibility="hidden";
-        playerg.style.visibility="visible";        
+        playerc.style.display="none";
+        playerg.style.display="block";        
         // cookie.classList.toggle("divchange");
 
     
@@ -21,27 +21,35 @@ playerc.addEventListener('click', function() {
   document.addEventListener('keydown', (e) => {
    if(e.key == "ArrowLeft"){
     //    alert(`first keydown event. key property value is "${e.key}"`);
-    playerd.style.visibility="hidden";  
-    playerc.style.visibility="hidden";
-    playerg.style.visibility="visible";  
+    playerd.style.display="none";  
+    playerc.style.display="none";
+    playerg.style.display="block"; 
+ 
 }
 if (e.key == "ArrowRight"){
 
-    playerg.style.visibility="hidden";  
-    playerc.style.visibility="hidden";
-    playerd.style.visibility="visible";  
+    playerg.style.display="none";  
+    playerc.style.display="none";
+    playerd.style.display="block";  
 }
   });
 
   document.addEventListener('keyup', (e) => {
 
-        playerg.style.visibility="hidden";  
-        playerc.style.visibility="visible";
-        playerd.style.visibility="hidden";  
+        playerg.style.display="none";  
+        playerc.style.display="block";
+        playerd.style.display="none";  
   });
- document.addEventListener("style", function{
-    if (playerg.style.visibility == "hidden" && drop5.style.visibility == "visible"){
-        alert('perdu');
-        splash1.style.visibility = "visible";        
-    }});
 
+
+    // if (splash1.y > playerg.y && playerg.y != 0){
+    //     alert('perdu');
+    // };
+
+document.addEventListener("animationend", function(){
+    if (splash1. y > playerg.y && playerg.style.display == "none"){
+        alert('perdu1');
+    }else{
+        splash1.style.visibility = "hidden";
+    }
+});

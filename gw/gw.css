@@ -12,6 +12,7 @@
     position: absolute;
     top: 62%;
     left: 680px;
+    display: none;
 }
 .playercentre{
     height: 50px;
@@ -24,6 +25,7 @@
     position: absolute;
     top: 62%;
     left: 470px;
+    display: none;
 }
 
 .drop1{
@@ -71,18 +73,138 @@
     top: 56%;
     left: 525px;
     height: 35px;
-    animation: 16s linear infinite dropfin;
+    animation: 17s linear infinite dropfin;
     transition: none;
 }
-.splash1{
+.rise2{
     position: absolute;
-    top: 68%;
-    left: 450px;
+    top: 50%;
+    left: 535px;
     height: 35px;
-    visibility: hidden;
+    animation: 18s linear infinite dropfin;
+    transition: none;
 }
-
-
+.rise3{
+    position: absolute;
+    top: 45%;
+    left: 540px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.rise4{
+    position: absolute;
+    top: 41%;
+    left: 555px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.drop21{
+    position: absolute;
+    top: 45%;
+    left: 583px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.drop22{
+    position: absolute;
+    top: 51%;
+    left: 585px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.drop23{
+    position: absolute;
+    top: 57%;
+    left: 590px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.drop24{
+    position: absolute;
+    top: 62%;
+    left: 600px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.rise21{
+    position: absolute;
+    top: 57%;
+    left: 630px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.rise22{
+    position: absolute;
+    top: 50%;
+    left: 635px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.rise23{
+    position: absolute;
+    top: 45%;
+    left: 665px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.drop31{
+    position: absolute;
+    top: 50%;
+    left: 685px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.drop32{
+    position: absolute;
+    top: 57%;
+    left: 690px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.drop33{
+    position: absolute;
+    top: 61%;
+    left: 700px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.rise31{
+    position: absolute;
+    top: 57%;
+    left: 730px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.rise32{
+    position: absolute;
+    top: 52%;
+    left: 750px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+.rise33{
+    position: absolute;
+    top: 56%;
+    left: 770px;
+    height: 35px;
+    animation: 18s linear infinite dropfin;
+    transition: none;
+}
+/* 
 @keyframes dropfin {
     0% {
         visibility: hidden;
@@ -93,5 +215,37 @@
       100% {
         visibility: visible;
       }
+    } */
+    .splash1{
+        position: absolute;
+        top: 68%;
+        left: 450px;
+        height: 35px;
+        animation: 15s linear 1 splash;
     }
-
+    .splash2{
+        position: absolute;
+        top: 68%;
+        left: 570px;
+        height: 35px;
+        animation: 15s linear 1 splash;
+    }
+    .splash3{
+        position: absolute;
+        top: 68%;
+        left: 670px;
+        height: 35px;
+        animation: 15s linear 1 splash;
+    }
+    /* @keyframes splash {
+        0% {
+            visibility: hidden;
+            top: 30%
+          }
+          90% {
+            visibility: hidden;
+          }
+          100% {
+            visibility: visible;
+          }
+        } */
