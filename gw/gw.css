@@ -66,12 +66,23 @@
 }
 .drop5{
     position: absolute;
-    top: 61%;
+    top: 63%;
     left: 490px;
     height: 35px;
-    animation: 5s linear 1 dropfin;
-    transition: none;
+    /* animation: 5s linear 1 dropfin; */
+   
+    /* visibility: hidden; */
+    animation: 5s ease-in 1 splash; 
+    
+}
+.drop5{
+    position: absolute;
+    top: 63%;
+    left: 490px;
+    height: 35px;
+    /* animation: 5s linear 1 dropfin; */
     visibility: hidden;
+    animation: 5s ease-in 1 splash; 
 }
 .rise1{
     position: absolute;
@@ -138,10 +149,10 @@
 }
 .drop24{
     position: absolute;
-    top: 62%;
+    top: 63%;
     left: 600px;
     height: 35px;
-    animation: 13s linear 1 dropfin;
+    animation: 13s ease-in 1 splash;
     transition: none;
     visibility: hidden;
 }
@@ -192,11 +203,10 @@
 }
 .drop33{
     position: absolute;
-    top: 61%;
+    top: 63%;
     left: 700px;
     height: 35px;
-    animation: 19s linear 1 dropfin;
-    transition: none;
+    animation: 18s ease-in 1 splash;
     visibility: hidden;
 }
 .rise31{
@@ -243,31 +253,38 @@
         top: 68%;
         left: 450px;
         height: 35px;
-        animation: 10s linear 1 splash;
+        visibility: hidden;
     }
     .splash2{
         position: absolute;
         top: 68%;
         left: 570px;
         height: 35px;
-        animation: 15s linear 1;
+        visibility: hidden;
     }
     .splash3{
         position: absolute;
         top: 68%;
         left: 670px;
         height: 35px;
-        animation: 15s linear 1;
+        visibility: hidden;
     }
     @keyframes splash {
         0% {
-            visibility: visible;
+            visibility: hidden;
             top: 30%
           }
-          90% {
+          
+          97% {
+            visibility: hidden;
+          }
+          99% {
             visibility: visible;
           }
+          99.5% {
+            visibility: hidden;
+          }
           100% {
-            visibility: visible;
+            visibility: hidden;
           }
         }

@@ -10,6 +10,7 @@ let drop3 = document.querySelector(".drop3");
 let drop4 = document.querySelector(".drop4");
 let drop5 = document.querySelector(".drop5");
 
+
 let rise1 = document.querySelector(".rise1");
 let rise2 = document.querySelector(".rise2");
 let rise3 = document.querySelector(".rise3");
@@ -35,6 +36,9 @@ let rise33 = document.querySelector(".rise33");
 
 
 let splash1 = document.querySelector(".splash1");
+let splash2 = document.querySelector(".splash2");
+let splash3 = document.querySelector(".splash3");
+
 
 
 
@@ -71,19 +75,10 @@ if (e.key == "ArrowRight"){
         playerc.style.display="block";
         playerd.style.display="none";  
   });
-
-
     // if (splash1.y > playerg.y && playerg.y != 0){
     //     alert('perdu');
     // };
 
-document.addEventListener("animationend", function(){
-    if (splash1.y > playerc.y && playerg.style.display == "none"){
-        splash1.classList.toggle('splash1');
-        alert("perdu");
-    }
-});
-  
 rise33.addEventListener("animationend", function(){
 
         drop1.style.animationName = "none";
@@ -143,4 +138,37 @@ rise33.addEventListener("animationend", function(){
         rise32.style.animationName = "";
         rise33.style.animationName = "";
     })
+    });
+    document.addEventListener("animationend", () =>{
+        if(drop1.y > playerd.y && playerd.style.display == "block"){
+            splash3.style.visibility = "visible";
+        }
+    });
+
+    drop5.addEventListener("animationend", function(){
+        if (drop5.y > playerc.y && playerg.style.display == "none"){
+            splash1.style.visibility = "visible";
+            console.log("perdu");
+            }else{
+                drop5bis.style.visibility = "visible";
+            }
+    });
+    drop24.addEventListener("animationend", function(){
+        if (drop24.y > playerc.y && playerc.style.display == "none"){
+            splash2.style.visibility = "visible";
+            console.log("perdu");
+            }
+    });
+    drop33.addEventListener("animationend", function(){
+        if (drop33.y > playerc.y && playerd.style.display == "none"){
+             splash3.style.visibility = "visible";
+             console.log("perdu");
+            }
+    });
+    
+    rise33.addEventListener("animationend" , function(){
+        drop5.style.animationName = "none";
+        requestAnimationFrame(() => {
+            drop5.style.animationName = "";
+        })
     });

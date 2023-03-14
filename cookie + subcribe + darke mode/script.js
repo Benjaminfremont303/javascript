@@ -51,10 +51,7 @@ let buttons = document.getElementById("button");
 console.log(buttons);
     
 
-buttons.addEventListener("click",function(){
-//    cookie.style.opacity="0";
-cookie.classList.toggle("divchange");
-})
+
 let texte = document.querySelector("p");
 
 buttons.addEventListener("click",function(){
@@ -66,14 +63,64 @@ let imga = document.querySelector(".fa-circle-up");
 let control = document.querySelector(".soleil");
 let body = document.querySelector("body");
 
+
+
+if (localStorage.getItem('cookie') === null){
+ 
+   localStorage.setItem('cookie','Off');
+
+   
+}else if (localStorage.getItem('cookie') === 'Off'){
+   cookie.classList.add("divchange");
+
+   // localStorage.setItem('cookie','On');
+}
+
+buttons.addEventListener("click",function(){
+   //    cookie.style.opacity="0";  
+   cookie.classList.toggle("divchange");
+
+   if  (localStorage.getItem('cookie') === 'On'){
+   localStorage.setItem('cookie','Off');
+
+
+   }else if (localStorage.getItem('cookie') === 'Off')
+   localStorage.setItem('cookie','on');
+
+   });
+
 abo.addEventListener("click",function(){
     abo.classList.toggle("divchange3");
     imga.classList.toggle("divchange2");
+    
 })
+
+
+if (localStorage.getItem('theme') === null){
+   localStorage.setItem('theme','light');
+}
+else if (localStorage.getItem('theme') === 'dark'){
+   body.classList.add("soleil2");    
+   control.classList.add("soleil2");
+}
+
+
 control.addEventListener("click",function(){
-    control.classList.toggle("soleil2");   
-    body.classList.toggle("soleil2");
- })
+     body.classList.toggle("soleil2");    
+      control.classList.toggle("soleil2");
+      
+   if (localStorage.getItem('theme') === 'light'){
+ 
+      localStorage.setItem('theme','dark');
+
+      
+   }else if (localStorage.getItem('theme') === 'dark'){
+
+      localStorage.setItem('theme','light');
+
+   }
+   }); 
+
 
  abo.addEventListener("click",function(){
  let text = document.querySelector(".abo");
@@ -83,6 +130,7 @@ control.addEventListener("click",function(){
  else if(text.value =="Merci"){
        text.value ="abonnez-vous";
     }
+    
  });
 
  
