@@ -1,0 +1,19 @@
+#brick {
+    width: 40px;
+    height: 60px;
+    background: #EE6B47;
+    position: relative;
+    cursor: pointer;
+  }
+
+  #path {
+    outline: 1px solid #E8C48E;
+    width: 540px;
+    height: 60px;
+  }
+  
+  .image{
+    position: relative;
+    left: 1px;
+  }
+  
