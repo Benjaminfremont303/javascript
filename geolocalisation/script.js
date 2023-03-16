@@ -26,6 +26,7 @@ src="https://maps.google.com/maps?q=+${latitude}+,+${longitude}+
 
       let image = document.querySelector(".image");
       let bouton = document.querySelector(".bouton");
+      let brick = document.querySelector("#brick")
       let value = 0;
             bouton.addEventListener("click", function(){
               value = parseInt(value +10)
@@ -33,10 +34,11 @@ src="https://maps.google.com/maps?q=+${latitude}+,+${longitude}+
             });
 
           
-            bouton.addEventListener("scrollto", function(){
-                anime({
-              targets: '.image',
-              translateX: 250,
-              duration: 3000
+            brick.addEventListener("click", function(){
+              anime({
+                targets: '.image, #brick',
+                translateX: 250,
+                endDelay: 1000,
+                direction: 'alternate'
             });
             });
