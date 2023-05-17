@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liste des articles</title>
+</head>
+<body>
+  <h1>Liste des articles</h1>
+  
+  <ul>
+    <% if (articles && articles.length > 0) { %>
+      <% articles.forEach(function(article) { %>
+        <li>
+          <h2><%= article.title %></h2>
+          <p><%= article.content %></p>
+          <a href="/articles/<%= article._id %>">Lire la suite</a>
+        </li>
+      <% }); %>
+    <% } else { %>
+      <li>Aucun article trouvé</li>
+    <% } %>
+  </ul>
+  
+  <a href="/articles/create">Créer un nouvel article</a>
+</body>
+</html>
+
+
