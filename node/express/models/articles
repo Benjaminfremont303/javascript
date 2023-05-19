@@ -1,0 +1,8 @@
+class article{
+    constructor(titre, contenu, date){
+        this.titre = titre;
+        this.contenu = contenu;
+        this.date = date;
+    }
+}
+module.export = {article};
