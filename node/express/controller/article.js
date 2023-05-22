@@ -1,4 +1,4 @@
-const {article} = require("../model/article");
+/* const {article} = require("../model/article");
 const article =  require("../bd/connect");
 const { collection } = require("../models/Article");
 
@@ -23,4 +23,4 @@ const ajouterArticle = async (req,res)=>{
     }
 }
 
-module.export = {ajouterArticle};
+module.export = {ajouterArticle}; */

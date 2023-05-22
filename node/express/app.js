@@ -11,7 +11,7 @@ app.use(methodOverride('_method'));
 app.get('/favicon.ico', (req, res) => res.status(204));
 // Configurer le moteur de template EJS
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/views/articles/');
 
 // Middleware pour les fichiers statiques
 app.use(express.static(__dirname + '/public'));
