@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Authentification</title>
+</head>
+<body>
+  <% if (messages.error_msg) { %>
+    <p><%= messages.error_msg %></p>
+  <% } %>
+
+  <% if (messages.success_msg) { %>
+    <p><%= messages.success_msg %></p>
+  <% } %>
+
+  <p>Bienvenue sur votre tableau de bord !</p>
+  <p>Contenu et fonctionnalités spécifiques à afficher ici.</p>
+
+  <a href="/logout">Déconnexion</a>
+
+    <h1>Bienvenue, <%= User.username %></h1>
+
+
+</body>
+</html>

@@ -1,10 +1,10 @@
 <h1>Modifier l'article</h1>
-<form method="POST" action="/articles/<%= article._id %>">
+<form method="POST" action="/edit/<%= article._id %>">
   <input type="hidden" name="_method" value="PUT">
   <label for="title">Titre</label>
   <input type="text" name="title" value="<%=article.title %>">
   <label for="content">Contenu</label>
   <textarea name="content"><%=article.content %></textarea>
   <button type="submit">Mettre à jour</button>
-  <%= article._id %>
-</form>
+</form>   
+      
