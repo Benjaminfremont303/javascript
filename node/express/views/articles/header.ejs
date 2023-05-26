@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/nav.css">
+    <link rel="stylesheet" type="text/css" href="/articles.css">
+    <link rel="stylesheet" type="text/css" href="/login.css">
+    <script src="/scriptNav.js"></script>
+    <title>The Wall</title>
+</head>
+<body>
+<div class="nav">
+    <input type="checkbox" id="ham-menu">
+    <label for="ham-menu">
+        <div class="hide-des">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </div>
+    </label>
+    <div class="full-page-green"></div>
+        <div class="ham-menu">
+            <ul class="centre-text bold-text">
+                <li><a href="/articles">Accueil</a></li>
+                <% if (username) { %>
+                <li><a href="/articles/edit">Créer un nouvel article</a></li>
+                    <li><a href="/articles/dashboard">Mon espace</a></li>
+                    <li> <a href="/logout">Déconnexion</a></li>
+                <% } else { %>
+                    <li><a href="/articles/register/">inscription</a></li>
+                    <li><a href="/articles/login/">connexion</a></li>
+                <% } %>
+            </ul>
+        </div>
+        <div>
+            <ul class="static-nav">
+                <li><a href="/articles">Accueil</a></li> <!-- ici -->
+                <% if (username) { %>
+                    <li><a href="/articles/dashboard">Mon espace</a></li>
+                    <li> <a href="/logout">Déconnexion</a></li>
+                <% } else { %>
+                    <li><a href="/articles/register/">inscription</a></li>
+                    <li><a href="/articles/login/">connexion</a></li>
+                <% } %>
+            </ul>
+        </div>   
+    </div>
+</div>

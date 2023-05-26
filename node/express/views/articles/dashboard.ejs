@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Authentification</title>
-</head>
-<body>
+<%- include('header') %>
   <% if (messages.error_msg) { %>
     <p><%= messages.error_msg %></p>
   <% } %>
@@ -17,7 +12,7 @@
 
   <a href="/logout">Déconnexion</a>
 
-    <h1>Bienvenue, <%= User.username %></h1>
+    <h1>Bienvenue, <%= username %></h1>
 
 
 </body>

@@ -1,33 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <a href="/articles/register/">inscription</a>
-  <a href="/articles/login/">connexion</a>
-  <title>Liste des articles</title>
-</head>
-<body>
-  <h1>Liste des articles</h1>
+<%- include('header') %>
+
+ 
+<div class="articleBox">
   
-  <ul>
+   <ul class="article">
+    <h1>Liste des post-its : </h1>
     <% if (articles && articles.length > 0) { %>
       <% articles.forEach(function(article) { %>
         <li>
           <h2><%= article.title %></h2>
-          <p><%= article.content %></p>
-          <p><%= article.id %></p>
           <a href="/articles/<%= article._id %>">Lire la suite</a>
         </li>
       <% }); %>
     <% } else { %>
-      <li>Aucun article trouvé</li>
+      <li>Aucun post-it trouvé</li>
     <% } %>
   </ul>     
-  
-  <a href="/articles/edit">Créer un nouvel article</a>
-  <footer style="background: beige;">
-    <p style="text-align: center;">&copy2023 - Tous droits réservés - Mentions légales - Conditions générales</p>
-  </footer>
-</body>
-</html>
+  </div>
+
+
 
 

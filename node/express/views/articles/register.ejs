@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Inscription</title>
-  </head>
-  <body>
-    <h1>Inscription</h1>
+<%- include('header') %>
+    
 
     <% if (messages.error_msg) { %>
       <p><%= messages.error_msg %></p>
@@ -13,8 +8,10 @@
     <% if (messages.success_msg) { %>
       <p><%= messages.success_msg %></p>
     <% } %>
-
+<div class="container">
+  <div class="formbox">
     <form method="POST" action="/articles/register">
+      <h1>Inscription</h1>
       <div>
         <label for="username">Nom d'utilisateur: </label>
         <input type="text" id="username" name="username" required>
@@ -31,6 +28,7 @@
         <button type="submit">S'inscrire</button>
       </div>
     </form>
-  </body>
-</html>
+  </div>
+</div>
+
 
